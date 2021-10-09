@@ -1,0 +1,223 @@
+@media (min-width: 0em) {
+    #landing {
+        height: 550px;
+        padding: $med-padding;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/assets/img1.jpeg);
+        background-position: center;
+        background-size: cover;
+        color: white;
+
+        h1 {
+            margin-bottom: $med-margin;
+            font-size: $font-size-lg;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin-bottom: $med-margin;
+            line-height: 1.5;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                margin-right: $med-margin;
+                text-decoration: none;
+                padding: 8px 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-1 {
+                background-color: $yellow-theme-color;
+            }
+
+            .btn-2 {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    #services {
+        width: 100%;
+        background-color: $bg-color-1;
+
+        & .services-container {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-gap: $med-margin;
+            padding: $med-padding;
+            margin: auto;
+
+            & .service {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                height: 400px;
+                display: grid;
+                grid-template-rows: 45% auto;
+
+                .service-card-content {
+                    padding: $med-padding 0;
+
+                    h4 {
+                        margin-bottom: $med-margin;
+                        font-size: 1.1rem;
+                    }
+
+                    p {
+                        margin-bottom: $med-margin * 2;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $yellow-theme-color;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: max-content;
+                        font-size: .9rem;
+                    }
+                }
+
+                .service-card-img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                }
+            }
+        }
+    }
+
+    #certs {
+        width: 100%;
+
+        .cert-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: $med-padding;
+
+            .section-heading {
+                padding: $lg-margin 0;
+
+                h2 {
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100px;
+                        height: 2px;
+                        background-color: $yellow-theme-color;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .certs-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+                grid-gap: $med-margin * 2;
+                padding: $lg-padding;
+
+                & .cert {
+                    position: relative;
+                    width: 100%;
+                    max-width: 450px;
+                    height: max-content;
+                    display: grid;
+                    place-items: center;
+                    grid-template-rows: 45% auto;
+                    text-align: center;
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        margin-bottom: $med-margin;
+                    }
+
+                    h4 {
+                        margin-bottom: $med-margin;
+                    }
+
+                    p {
+                        color: $para-text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    #exp {
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(/assets/img5.jpeg);
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $med-padding;
+
+        &>div {
+            color: white;
+
+            p {
+                color: $yellow-theme-color
+            }
+
+            h2 {
+                font-size: $font-size-lg;
+                margin-bottom: $med-margin;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: black;
+                background-color: white;
+                width: max-content;
+                padding: 8px 15px;
+            }
+        }
+    }
+
+    #recent-works {
+        width: 100%;
+        padding: $med-padding;
+
+        .section-heading {
+            padding: $lg-margin 0;
+
+            h2 {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100px;
+                    height: 2px;
+                    background-color: $yellow-theme-color;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -935,6 +935,64 @@ html {
   margin-right: 1em;
 }
 
+.swiper-container {
+  height: 375px;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-container .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.swiper-container .swiper-wrapper .swiper-1 {
+  background: url(/assets/img6.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-container .swiper-wrapper .swiper-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/assets/img2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-container .swiper-wrapper .swiper-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/assets/img4.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 @media (min-width: 0em) {
   #landing {
     height: 550px;
@@ -1117,6 +1175,70 @@ html {
   }
   #certs .cert-container .certs-grid .cert p {
     color: #333;
+  }
+  #exp {
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/assets/img5.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/img5.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+  }
+  #exp > div {
+    color: white;
+  }
+  #exp > div p {
+    color: #fab702;
+  }
+  #exp > div h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  #exp > div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 8px 15px;
+  }
+  #recent-works {
+    width: 100%;
+    padding: 1rem;
+  }
+  #recent-works .section-heading {
+    padding: 2rem 0;
+  }
+  #recent-works .section-heading h2 {
+    position: relative;
+  }
+  #recent-works .section-heading h2::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #fab702;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
