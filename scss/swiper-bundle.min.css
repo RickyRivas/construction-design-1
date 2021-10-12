@@ -19,7 +19,7 @@
 }
 /* SWIPER CSS*/
 :root {
-  --swiper-theme-color: var(--standard-gold);
+  --swiper-theme-color: goldenrod;
 }
 .swiper-container {
   position: relative;

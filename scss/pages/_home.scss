@@ -91,7 +91,8 @@
                         align-items: center;
                         width: max-content;
                         font-size: .9rem;
-                        &:hover{
+
+                        &:hover {
                             text-decoration: underline 1px solid $yellow-theme-color;
                         }
                     }
@@ -175,7 +176,7 @@
         align-items: center;
         padding: $padding-md;
         position: relative;
-        background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),url(/assets/img3.jpg) center / cover;
+        background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(/assets/img4.jpg) center / cover;
 
         &>div {
             color: white;
@@ -203,24 +204,54 @@
         }
     }
 
-    #recent-works {
+    #testimonials {
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/assets/img3.jpg) center / cover;
         width: 100%;
-        padding: $padding-md;
 
-        .section-heading {
-            padding: margin-lg 0;
+        .testimonials-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: $padding-md;
 
-            h2 {
-                position: relative;
-                line-height: 3rem;
+            .section-heading {
+                padding: $margin-lg 0;
+                color: white;
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 100px;
-                    height: 2px;
-                    background-color: $yellow-theme-color;
-                    bottom: 0;
+                h2 {
+                    position: relative;
+                    line-height: 3rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100px;
+                        height: 2px;
+                        background-color: $yellow-theme-color;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                color: white;
+                img {
+                    width: 100%;
+                    margin-bottom: $margin-sm;
+                }
+                p {
+                    margin-bottom: $margin-md;
                 }
             }
         }

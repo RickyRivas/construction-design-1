@@ -1238,8 +1238,8 @@ html {
             align-items: center;
     padding: 1rem;
     position: relative;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/assets/img3.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img3.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/assets/img4.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img4.jpg) center/cover;
   }
   #exp > div {
     color: white;
@@ -1270,24 +1270,70 @@ html {
     padding: 8px 15px;
     margin: 0;
   }
-  #recent-works {
+  #testimonials {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/assets/img3.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img3.jpg) center/cover;
     width: 100%;
+  }
+  #testimonials .testimonials-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 1rem;
   }
-  #recent-works .section-heading {
-    padding: margin-lg 0;
+  #testimonials .testimonials-container .section-heading {
+    padding: 2rem 0;
+    color: white;
   }
-  #recent-works .section-heading h2 {
+  #testimonials .testimonials-container .section-heading h2 {
     position: relative;
     line-height: 3rem;
   }
-  #recent-works .section-heading h2::before {
+  #testimonials .testimonials-container .section-heading h2::before {
     content: '';
     position: absolute;
     width: 100px;
     height: 2px;
     background-color: #fab702;
     bottom: 0;
+  }
+  #testimonials .testimonials-container .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  #testimonials .testimonials-container .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+  }
+  #testimonials .testimonials-container .swiper-slide img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  #testimonials .testimonials-container .swiper-slide p {
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
