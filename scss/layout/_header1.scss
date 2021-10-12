@@ -4,6 +4,10 @@
     position: relative;
   }
 
+  .body-fixed {
+    overflow: hidden;
+  }
+
   .hamburger.hamburger--squeeze {
     display: block;
     box-shadow: none;
@@ -11,7 +15,7 @@
   }
 
   header {
-    position: fixed;
+    position: absolute;
     z-index: 5;
     width: 100vw;
 
@@ -79,6 +83,23 @@
 
         &.is-active {
           transform: translate(0%);
+        }
+      }
+
+      .navlinks-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        transform: translateX(100%);
+        background: rgba(0, 0, 0, .4);
+        z-index: 99;
+
+        &.is-active {
+          transform: translate(0%);
+          animation: fadeIn 0.5s ease-in;
         }
       }
     }
@@ -301,7 +322,7 @@
     z-index: 100;
   }
 
-header {
+  header {
     z-index: 5;
     position: relative;
     z-index: 1000;
@@ -406,7 +427,7 @@ header {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: white;
+  background-color: black;
 }
 
 .hamburger-box {
@@ -451,7 +472,6 @@ header {
 .hamburger-inner::after {
   bottom: -10px;
 }
-
 /*
    * Squeeze
    */

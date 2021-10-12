@@ -40,6 +40,9 @@ html {
     overflow-x: hidden;
     position: relative;
   }
+  .body-fixed {
+    overflow: hidden;
+  }
   .hamburger.hamburger--squeeze {
     display: block;
     -webkit-box-shadow: none;
@@ -47,7 +50,7 @@ html {
     z-index: 100;
   }
   header {
-    position: fixed;
+    position: absolute;
     z-index: 5;
     width: 100vw;
   }
@@ -136,6 +139,24 @@ html {
   header nav .nav-links.is-active {
     -webkit-transform: translate(0%);
             transform: translate(0%);
+  }
+  header nav .navlinks-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+  }
+  header nav .navlinks-overlay.is-active {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    -webkit-animation: fadeIn 0.5s ease-in;
+            animation: fadeIn 0.5s ease-in;
   }
   @-webkit-keyframes navLinkFade {
     from {
@@ -539,7 +560,7 @@ html {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: white;
+  background-color: black;
 }
 
 .hamburger-box {
@@ -770,7 +791,7 @@ html {
   }
   .footer .site-credit .credit {
     text-transform: uppercase;
-    color: white;
+    color: #fab702;
   }
 }
 
@@ -920,13 +941,50 @@ html {
 .btn {
   cursor: pointer;
   padding: 10px 30px;
-  background-color: black;
+  background-color: #1e88e5;
   border: 0;
   color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .btn:hover {
   opacity: .8;
+}
+
+.btn-primary {
+  background-color: #1e88e5;
+}
+
+.btn-success {
+  background-color: #2dc653;
+}
+
+.btn-danger {
+  background-color: #d00000;
+}
+
+.btn-info {
+  background-color: #48cae4;
+}
+
+.btn-warning {
+  background-color: #ffee32;
+  color: black;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-dark {
+  background-color: #212529;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: black;
 }
 
 .standard-icon {
@@ -936,6 +994,7 @@ html {
 }
 
 .swiper-container {
+  margin: 1rem 0;
   height: 375px;
   width: 100%;
   position: relative;
@@ -974,23 +1033,15 @@ html {
 }
 
 .swiper-container .swiper-wrapper .swiper-1 {
-  background: url(/assets/img6.jpg);
-  background-position: center;
-  background-size: cover;
+  background: url(/assets/img1.jpeg) center/cover;
 }
 
 .swiper-container .swiper-wrapper .swiper-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/assets/img2.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img2.jpg);
-  background-position: center;
-  background-size: cover;
+  background: url(/assets/img4.jpg) center/cover;
 }
 
 .swiper-container .swiper-wrapper .swiper-3 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/assets/img4.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img4.jpg);
-  background-size: cover;
-  background-position: center;
+  background: url(/assets/img6.jpg) center/cover;
 }
 
 @media (min-width: 0em) {
@@ -1018,7 +1069,7 @@ html {
   }
   #landing h1 {
     margin-bottom: 1rem;
-    font-size: 40px;
+    font-size: 1.7rem;
     letter-spacing: 2px;
   }
   #landing p {
@@ -1056,6 +1107,7 @@ html {
   #landing div .btn-2 {
     background-color: white;
     color: black;
+    margin: 0;
   }
   #services {
     width: 100%;
@@ -1111,6 +1163,10 @@ html {
     width: max-content;
     font-size: .9rem;
   }
+  #services .services-container .service .service-card-content a:hover {
+    -webkit-text-decoration: underline 1px solid #fab702;
+            text-decoration: underline 1px solid #fab702;
+  }
   #services .services-container .service .service-card-img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -1134,6 +1190,7 @@ html {
   }
   #certs .cert-container .section-heading h2 {
     position: relative;
+    line-height: 3rem;
   }
   #certs .cert-container .section-heading h2::before {
     content: '';
@@ -1149,7 +1206,6 @@ html {
     -ms-grid-columns: (minmax(270px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-gap: 2rem;
-    padding: 2rem;
   }
   #certs .cert-container .certs-grid .cert {
     position: relative;
@@ -1178,10 +1234,6 @@ html {
   }
   #exp {
     width: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/assets/img5.jpeg);
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/img5.jpeg);
-    background-position: center;
-    background-size: cover;
     height: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1193,6 +1245,9 @@ html {
         -ms-flex-align: center;
             align-items: center;
     padding: 1rem;
+    position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/assets/img3.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img3.jpg) center/cover;
   }
   #exp > div {
     color: white;
@@ -1201,7 +1256,7 @@ html {
     color: #fab702;
   }
   #exp > div h2 {
-    font-size: 40px;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
   }
   #exp > div a {
@@ -1221,16 +1276,18 @@ html {
     width: -moz-max-content;
     width: max-content;
     padding: 8px 15px;
+    margin: 0;
   }
   #recent-works {
     width: 100%;
     padding: 1rem;
   }
   #recent-works .section-heading {
-    padding: 2rem 0;
+    padding: margin-lg 0;
   }
   #recent-works .section-heading h2 {
     position: relative;
+    line-height: 3rem;
   }
   #recent-works .section-heading h2::before {
     content: '';

@@ -1,7 +1,7 @@
 @media (min-width: 0em) {
     #landing {
         height: 550px;
-        padding: $med-padding;
+        padding: $padding-md;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -12,13 +12,13 @@
         color: white;
 
         h1 {
-            margin-bottom: $med-margin;
+            margin-bottom: $margin-md;
             font-size: $font-size-lg;
             letter-spacing: 2px;
         }
 
         p {
-            margin-bottom: $med-margin;
+            margin-bottom: $margin-md;
             line-height: 1.5;
         }
 
@@ -28,7 +28,7 @@
             align-items: center;
 
             a {
-                margin-right: $med-margin;
+                margin-right: $margin-md;
                 text-decoration: none;
                 padding: 8px 15px;
                 display: flex;
@@ -43,6 +43,7 @@
             .btn-2 {
                 background-color: white;
                 color: black;
+                margin: 0;
             }
         }
     }
@@ -56,8 +57,8 @@
             width: 100%;
             max-width: 1200px;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            grid-gap: $med-margin;
-            padding: $med-padding;
+            grid-gap: $margin-md;
+            padding: $padding-md;
             margin: auto;
 
             & .service {
@@ -69,15 +70,15 @@
                 grid-template-rows: 45% auto;
 
                 .service-card-content {
-                    padding: $med-padding 0;
+                    padding: $padding-md 0;
 
                     h4 {
-                        margin-bottom: $med-margin;
+                        margin-bottom: $margin-md;
                         font-size: 1.1rem;
                     }
 
                     p {
-                        margin-bottom: $med-margin * 2;
+                        margin-bottom: $margin-md * 2;
                     }
 
                     a {
@@ -90,6 +91,9 @@
                         align-items: center;
                         width: max-content;
                         font-size: .9rem;
+                        &:hover{
+                            text-decoration: underline 1px solid $yellow-theme-color;
+                        }
                     }
                 }
 
@@ -110,13 +114,14 @@
         .cert-container {
             max-width: 1200px;
             margin: auto;
-            padding: $med-padding;
+            padding: $padding-md;
 
             .section-heading {
-                padding: $lg-margin 0;
+                padding: $margin-lg 0;
 
                 h2 {
                     position: relative;
+                    line-height: 3rem;
 
                     &::before {
                         content: '';
@@ -132,8 +137,7 @@
             .certs-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-                grid-gap: $med-margin * 2;
-                padding: $lg-padding;
+                grid-gap: $margin-md * 2;
 
                 & .cert {
                     position: relative;
@@ -148,11 +152,11 @@
                     img {
                         width: 80px;
                         height: 80px;
-                        margin-bottom: $med-margin;
+                        margin-bottom: $margin-md;
                     }
 
                     h4 {
-                        margin-bottom: $med-margin;
+                        margin-bottom: $margin-md;
                     }
 
                     p {
@@ -165,14 +169,13 @@
 
     #exp {
         width: 100%;
-        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(/assets/img5.jpeg);
-        background-position: center;
-        background-size: cover;
         height: 500px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: $med-padding;
+        padding: $padding-md;
+        position: relative;
+        background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),url(/assets/img3.jpg) center / cover;
 
         &>div {
             color: white;
@@ -183,7 +186,7 @@
 
             h2 {
                 font-size: $font-size-lg;
-                margin-bottom: $med-margin;
+                margin-bottom: $margin-md;
             }
 
             a {
@@ -195,19 +198,21 @@
                 background-color: white;
                 width: max-content;
                 padding: 8px 15px;
+                margin: 0;
             }
         }
     }
 
     #recent-works {
         width: 100%;
-        padding: $med-padding;
+        padding: $padding-md;
 
         .section-heading {
-            padding: $lg-margin 0;
+            padding: margin-lg 0;
 
             h2 {
                 position: relative;
+                line-height: 3rem;
 
                 &::before {
                     content: '';
