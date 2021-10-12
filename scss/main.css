@@ -158,28 +158,20 @@ html {
     -webkit-animation: fadeIn 0.5s ease-in;
             animation: fadeIn 0.5s ease-in;
   }
-  @-webkit-keyframes navLinkFade {
+  @-webkit-keyframes fadeIn {
     from {
       opacity: 0;
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
     }
     to {
       opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
     }
   }
-  @keyframes navLinkFade {
+  @keyframes fadeIn {
     from {
       opacity: 0;
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
     }
     to {
       opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
     }
   }
 }
