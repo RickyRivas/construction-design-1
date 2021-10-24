@@ -1,52 +1,152 @@
 @media (min-width: 0em) {
     #landing {
-        height: 550px;
-        padding: $padding-md;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/assets/img1.jpeg);
-        background-position: center;
-        background-size: cover;
-        color: white;
+        width: 100%;
+        height: 625px;
 
-        h1 {
-            margin-bottom: $margin-md;
-            font-size: $font-size-lg;
-            letter-spacing: 2px;
-        }
-
-        p {
-            margin-bottom: $margin-md;
-            line-height: 1.5;
-        }
-
-        div {
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
 
-            a {
-                margin-right: $margin-md;
-                text-decoration: none;
-                padding: 8px 15px;
+            .swiper-container {
+                height: 100%;
+                width: 100%;
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            }
+                flex-direction: column;
+                padding: 0;
 
-            .btn-1 {
-                background-color: $yellow-theme-color;
-            }
 
-            .btn-2 {
-                background-color: white;
-                color: black;
-                margin: 0;
+                .swiper-wrapper {
+                    display: flex;
+                    z-index: 1;
+
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+
+                        .landing-content {
+                            height: 100%;
+                            padding: $padding-md;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            color: white;
+                            max-width: 1200px;
+                            margin: auto;
+
+
+                            h1 {
+                                margin-bottom: $margin-md;
+                                font-size: $font-size-lg;
+                                letter-spacing: 2px;
+                            }
+
+                            p {
+                                margin-bottom: $margin-md;
+                                line-height: 1.5;
+                            }
+
+                            div {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                a {
+                                    margin-right: $margin-md;
+                                    text-decoration: none;
+                                    padding: 8px 15px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+
+                                .btn-1 {
+                                    background-color: $yellow-theme-color;
+                                }
+
+                                .btn-2 {
+                                    background-color: white;
+                                    color: black;
+                                    margin: 0;
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    .swiper-landing-1 {
+                        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/img1.jpeg) center / cover;
+                    }
+
+                    .swiper-landing-2 {
+                        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/img2.jpg) center / cover;
+                    }
+
+                    .swiper-landing-3 {
+                        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/img3.jpg) center / cover;
+                    }
+
+                }
+
+                .swiper-pagination-1 {
+                    z-index: 2;
+                    color: white;
+                    position: absolute;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .swiper-slide-active.swiper-slide {
+                    .landing-content {
+                        h1 {
+                            opacity: 0;
+                            animation: fadeInUp 0.5s cubic-bezier(0.3, 0, 0.7, 1) both;
+                            animation-delay: .9s;
+                        }
+
+                        p {
+                            animation: fadeInUp 0.5s cubic-bezier(0.3, 0, 0.7, 1) both;
+                            opacity: 0;
+                            animation-delay: 1.4s;
+                        }
+
+                        a {
+                            opacity: 0;
+                            animation: fadeInUp 0.5s cubic-bezier(0.3, 0, 0.7, 1) both;
+                            animation-delay: 1.9s;
+                        }
+                    }
+                }
             }
         }
     }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
 
     #services {
         width: 100%;
@@ -246,10 +346,12 @@
                 align-items: flex-start;
                 flex-direction: column;
                 color: white;
+
                 img {
                     width: 100%;
                     margin-bottom: $margin-sm;
                 }
+
                 p {
                     margin-bottom: $margin-md;
                 }

@@ -36,6 +36,26 @@ navOverlay.addEventListener('click', () => {
 //     localStorage.setItem('theme', theme)
 // })
 // Swipers
+var swiper = new Swiper(".landingSwiper", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    speed: 1000,
+    loop: true,
+    parallax: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination-1",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next-1",
+        prevEl: ".swiper-button-prev-1",
+    }
+});
+
   var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         centeredSlides: true,
