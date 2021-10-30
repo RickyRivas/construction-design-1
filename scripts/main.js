@@ -69,8 +69,8 @@ var swiper = new Swiper(".swiper-container-test", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-next-test",
+    prevEl: ".swiper-prev-test",
   },
 });
 
@@ -87,8 +87,8 @@ var swiper = new Swiper(".swiper-container-work", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev"
   },
 });
 var swiper = new Swiper(".swiper-container-services", {
@@ -104,7 +104,7 @@ var swiper = new Swiper(".swiper-container-services", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-next-ser",
+    prevEl: ".swiper-prev-ser",
   },
 });

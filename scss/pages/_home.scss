@@ -133,6 +133,32 @@
             }
         }
     }
+    // Controller for Swipers
+         .controller {
+                color: white;
+                width: max-content;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                place-items: center;
+                grid-gap: 1rem;
+                &>button {
+                    width: max-content;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: none;
+                    border: 0;
+                    cursor: pointer;
+                    img {
+                        width: 2rem;
+                    }
+                }
+                .swiper-prev, .swiper-prev-ser, .swiper-prev-test {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
 
     @keyframes fadeInUp {
         0% {
@@ -318,6 +344,10 @@
 
             .heading {
                 margin-bottom: $margin-lg;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
 
                 h2 {
                     position: relative;
@@ -409,6 +439,10 @@
             .section-heading {
                 margin-bottom: $margin-lg;
                 color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
 
                 h2 {
                     position: relative;
@@ -444,11 +478,12 @@
 
                 p {
                     margin-bottom: $margin-md;
+                    font-size: $font-size-sm;
                 }
             }
         }
     }
-
+    // Featured Projects
     #projects {
         width: 100vw;
         height: max-content;
@@ -466,6 +501,10 @@
 
             .heading {
                 color: white;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 margin-bottom: $margin-lg;
 
                 h2 {
@@ -485,6 +524,7 @@
 
             .swiper-container-work {
                 width: 100%;
+                margin-bottom: $margin-md;
 
                 .swiper-wrapper {
                     width: 100%;
