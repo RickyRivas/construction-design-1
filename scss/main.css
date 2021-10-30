@@ -31,7 +31,7 @@ html {
 
 @media screen and (min-width: 1000px) {
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -1447,8 +1447,21 @@ button.swiper-pagination-bullet {
 @media (min-width: 0em) {
   footer {
     width: 100%;
-    background: #172933;
+    background: #000;
     padding-top: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   footer .container {
     display: -ms-grid;
@@ -1457,7 +1470,10 @@ button.swiper-pagination-bullet {
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     place-items: center;
     color: white;
+    width: 100%;
+    height: 100%;
     max-width: 1200px;
+    grid-gap: 1rem;
     margin: auto;
     margin-bottom: 1rem;
   }
@@ -1475,61 +1491,60 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 175px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     padding: 0 1rem;
     font-weight: lighter;
     width: 100%;
   }
   footer .container .col p {
-    color: #ced4da;
+    color: #adb5bd;
+    font-size: 14px;
   }
   footer .container .col h2 {
     margin-bottom: 1rem;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 16px;
+    text-transform: uppercase;
   }
   footer .container .col ul {
     list-style: none;
   }
   footer .container .col ul li {
     margin-bottom: 0.5rem;
-    font-size: 0.875rem;
     color: #ced4da;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   footer .container .col ul a {
     color: #ced4da;
     text-decoration: none;
+    font-size: 14px;
   }
-  footer .container .col .social-media {
+  footer .container .col img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    opacity: 60%;
+  }
+  footer .container .col .business-hours li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer .container .col .social-media a {
-    color: #ced4da;
-    text-decoration: none;
-  }
-  footer .container .col .social-media .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 0.5rem;
   }
   footer .site-credit {
     width: 100%;
@@ -1556,12 +1571,14 @@ button.swiper-pagination-bullet {
   footer .site-credit p {
     text-transform: uppercase;
     color: #dee2e6;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1024px) {
   footer {
     padding-top: 2rem;
+    font-size: 0.875rem;
   }
   footer .container {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
