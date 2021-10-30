@@ -1962,10 +1962,10 @@ button.swiper-pagination-bullet {
   #certs .cert-container {
     max-width: 1200px;
     margin: auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   #certs .cert-container .section-heading {
-    padding: 2rem 0;
+    margin-bottom: 2rem;
   }
   #certs .cert-container .section-heading h2 {
     position: relative;
@@ -2075,10 +2075,10 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   #services .container .heading {
-    padding: 2rem 0;
+    margin-bottom: 2rem;
   }
   #services .container .heading h2 {
     position: relative;
@@ -2174,10 +2174,10 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   #testimonials .testimonials-container .section-heading {
-    padding: 2rem 0;
+    margin-bottom: 2rem;
     color: white;
   }
   #testimonials .testimonials-container .section-heading h2 {
@@ -2246,8 +2246,8 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
   #projects .container .heading {
-    padding: 2rem 0;
     color: white;
+    margin-bottom: 2rem;
   }
   #projects .container .heading h2 {
     position: relative;

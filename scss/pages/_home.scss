@@ -216,10 +216,10 @@
         .cert-container {
             max-width: 1200px;
             margin: auto;
-            padding: $padding-md;
+            padding: $padding-lg $padding-md;
 
             .section-heading {
-                padding: $margin-lg 0;
+                margin-bottom: $margin-lg;
 
                 h2 {
                     position: relative;
@@ -314,10 +314,10 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            padding: $padding-md;
+            padding: $padding-lg $padding-md;
 
             .heading {
-                padding: $margin-lg 0;
+                margin-bottom: $margin-lg;
 
                 h2 {
                     position: relative;
@@ -404,10 +404,10 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            padding: $padding-md;
+            padding: $padding-lg $padding-md;
 
             .section-heading {
-                padding: $margin-lg 0;
+                margin-bottom: $margin-lg;
                 color: white;
 
                 h2 {
@@ -465,8 +465,8 @@
             width: 100%;
 
             .heading {
-                padding: $margin-lg 0;
                 color: white;
+                margin-bottom: $margin-lg;
 
                 h2 {
                     position: relative;
