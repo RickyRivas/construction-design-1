@@ -1870,11 +1870,11 @@ button.swiper-pagination-bullet {
       transform: translateY(0);
     }
   }
-  #services {
+  #pitch {
     width: 100%;
     background-color: #f9f9f9;
   }
-  #services .services-container {
+  #pitch .container {
     display: -ms-grid;
     display: grid;
     width: 100%;
@@ -1885,7 +1885,7 @@ button.swiper-pagination-bullet {
     padding: 1rem;
     margin: auto;
   }
-  #services .services-container .service {
+  #pitch .container .service {
     position: relative;
     width: 100%;
     max-width: 450px;
@@ -1895,17 +1895,17 @@ button.swiper-pagination-bullet {
     -ms-grid-rows: 45% auto;
         grid-template-rows: 45% auto;
   }
-  #services .services-container .service .service-card-content {
+  #pitch .container .service .service-card-content {
     padding: 1rem 0;
   }
-  #services .services-container .service .service-card-content h4 {
+  #pitch .container .service .service-card-content h4 {
     margin-bottom: 1rem;
     font-size: 1.1rem;
   }
-  #services .services-container .service .service-card-content p {
+  #pitch .container .service .service-card-content p {
     margin-bottom: 2rem;
   }
-  #services .services-container .service .service-card-content a {
+  #pitch .container .service .service-card-content a {
     text-decoration: none;
     color: #fab702;
     text-transform: uppercase;
@@ -1924,11 +1924,11 @@ button.swiper-pagination-bullet {
     width: max-content;
     font-size: .9rem;
   }
-  #services .services-container .service .service-card-content a:hover {
+  #pitch .container .service .service-card-content a:hover {
     -webkit-text-decoration: underline 1px solid #fab702;
             text-decoration: underline 1px solid #fab702;
   }
-  #services .services-container .service .service-card-img {
+  #pitch .container .service .service-card-img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -2038,6 +2038,103 @@ button.swiper-pagination-bullet {
     width: max-content;
     padding: 8px 15px;
     margin: 0;
+  }
+  #services {
+    width: 100%;
+  }
+  #services .container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+  #services .container .heading {
+    padding: 2rem 0;
+  }
+  #services .container .heading h2 {
+    position: relative;
+    line-height: 3rem;
+  }
+  #services .container .heading h2::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #fab702;
+    bottom: 0;
+  }
+  #services .container .swiper-container-services {
+    width: 100%;
+  }
+  #services .container .swiper-container-services .swiper-wrapper {
+    width: 100%;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide {
+    width: 100%;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 45% auto;
+        grid-template-rows: 45% auto;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service .service-card-content {
+    padding: 1rem 0;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service .service-card-content h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service .service-card-content p {
+    margin-bottom: 2rem;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service .service-card-content a {
+    text-decoration: none;
+    color: #fab702;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: .9rem;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service .service-card-content a:hover {
+    -webkit-text-decoration: underline 1px solid #fab702;
+            text-decoration: underline 1px solid #fab702;
+  }
+  #services .container .swiper-container-services .swiper-wrapper .swiper-slide .service .service-card-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   #testimonials {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/assets/img3.jpg) center/cover;

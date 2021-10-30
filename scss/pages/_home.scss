@@ -149,11 +149,11 @@
     }
 
 
-    #services {
+    #pitch {
         width: 100%;
         background-color: $bg-color-1;
 
-        & .services-container {
+        & .container {
             display: grid;
             width: 100%;
             max-width: 1200px;
@@ -305,6 +305,95 @@
         }
     }
 
+    #services {
+        width: 100%;
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: $padding-md;
+
+            .heading {
+                padding: $margin-lg 0;
+
+                h2 {
+                    position: relative;
+                    line-height: 3rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100px;
+                        height: 2px;
+                        background-color: $yellow-theme-color;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .swiper-container-services {
+                width: 100%;
+
+                .swiper-wrapper {
+                    width: 100%;
+
+                    .swiper-slide {
+                        width: 100%;
+
+                         .service {
+                            position: relative;
+                            width: 100%;
+                            max-width: 450px;
+                            height: 400px;
+                            display: grid;
+                            grid-template-rows: 45% auto;
+
+                            .service-card-content {
+                                padding: $padding-md 0;
+
+                                h4 {
+                                    margin-bottom: $margin-md;
+                                    font-size: 1.1rem;
+                                }
+
+                                p {
+                                    margin-bottom: $margin-md * 2;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    color: $yellow-theme-color;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: max-content;
+                                    font-size: .9rem;
+
+                                    &:hover {
+                                        text-decoration: underline 1px solid $yellow-theme-color;
+                                    }
+                                }
+                            }
+
+                            .service-card-img {
+                                object-fit: cover;
+                                object-position: center;
+                                width: 100%;
+                                height: 100%;
+                                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     #testimonials {
         background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/assets/img3.jpg) center / cover;
         width: 100%;
@@ -374,8 +463,9 @@
             max-width: 1200px;
             margin: auto;
             width: 100%;
+
             .heading {
-                  padding: $margin-lg 0;
+                padding: $margin-lg 0;
                 color: white;
 
                 h2 {
